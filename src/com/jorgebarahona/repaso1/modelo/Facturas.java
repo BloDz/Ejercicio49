@@ -21,7 +21,7 @@ public class Facturas {
 		this.importe = _importe;
 		
 	}
-
+	/*Prueba*/
 
 	public int getId() {
 		return id;
