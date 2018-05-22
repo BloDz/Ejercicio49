@@ -1,8 +1,10 @@
 package com.jorgebarahona.repaso1.modelo;
 
+import java.util.Comparator;
+
 import com.jorgebarahona.repaso1.vista.Ejecutador;
 
-public class Facturas {
+public class Facturas implements Comparator<Facturas>{
 	
 	private int id;
 	private String nombre;
@@ -10,13 +12,13 @@ public class Facturas {
 	
 	
 	public Facturas(int _id, String _nombre, float _importe) throws Exception{
+		this.id = _id;
+		this.importe = _importe;
 		if(nombre.trim().isEmpty()==false) {
 			throw new Exception ("El nombre no puede estar vacio");
 		}
-		this.id = _id;
-		this.nombre = _nombre;
-		this.importe = _importe;
 		
+		this.nombre = _nombre;
 	}
 	/*Prueba*/
 
@@ -52,6 +54,17 @@ public class Facturas {
 
 	public void mostrar() {
 		System.out.println("ID del Producto:"+id+", Nombre Producto:"+nombre+ ", Importe:"+importe);
+	}
+
+	@Override
+	public int compare(Facturas o1, Facturas o2) {
+		if(o1.getId()>o2.getId()) {
+			return 1;
+		} else if(o1.getId()<o2.getId()) {
+			return -1;
+		} else {
+			return 0;
+		}
 	}
 
 }
