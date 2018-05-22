@@ -10,9 +10,6 @@ public class Facturas {
 	
 	
 	public Facturas(int _id, String _nombre, float _importe) throws Exception{
-		super();
-		@SuppressWarnings("unused")
-		Ejecutador e = new Ejecutador();
 		if(nombre.trim().isEmpty()==false) {
 			throw new Exception ("El nombre no puede estar vacio");
 		}
