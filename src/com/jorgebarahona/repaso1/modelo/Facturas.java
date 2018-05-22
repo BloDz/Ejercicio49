@@ -54,7 +54,6 @@ public class Facturas {
 
 
 	public void mostrar() {
-		// TODO Auto-generated method stub
 		System.out.println("ID del Producto:"+id+", Nombre Producto:"+nombre+ ", Importe:"+importe);
 	}
 
